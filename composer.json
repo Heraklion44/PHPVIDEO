@@ -1,0 +1,24 @@
+{
+    "name": "louis/phpvideo",
+    "type": "projet",
+    "autoload": {
+        "psr-4": {
+            "Louis\\Phpvideo\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Heraklion44",
+            "email": "heraklion44@gmail.com"
+        }
+    ],
+    "autoload-dev": {
+        "psr-4": {
+            "Router\\":"routes/",
+            "App\\":"app/",
+            "Database\\":"database/"
+        }
+    },
+    "minimum-stability": "stable",
+    "require": {}
+}
