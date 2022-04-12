@@ -19,6 +19,9 @@ class BlogController extends Controller
 
     public function show(int $id)
     {
-        return $this->view('blog.show', compact('id'));
+        $stmt = $this->db->getPDO()->prepare('SELECT * FROM posts WHERE id = ?');
+        $stmt->execute([$id]);
+        $post = $stmt->fetch();
+        return $this->view('blog.show', compact('post'));
     }
 }
