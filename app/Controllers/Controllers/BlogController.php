@@ -2,6 +2,8 @@
 
 namespace App\Controllers;
 
+use App\Models\Post;
+
 class BlogController extends Controller
 {
     public function welcome()
@@ -11,8 +13,9 @@ class BlogController extends Controller
 
     public function index()
     {
-        $stmt= $this->db->getPDO()->query('SELECT * FROM posts ORDER BY created_at DESC');
-        $posts = $stmt->fetchAll();
+        $post = new Post($this->getDB());
+        $posts = $post->all();
+        
 
         return $this->view('blog.index', compact('posts'));
     }
