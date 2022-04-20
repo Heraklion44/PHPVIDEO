@@ -22,9 +22,9 @@ class BlogController extends Controller
 
     public function show(int $id)
     {
-        $stmt = $this->db->getPDO()->prepare('SELECT * FROM posts WHERE id = ?');
-        $stmt->execute([$id]);
-        $post = $stmt->fetch();
+        $post = new Post($this->getDB());
+        $post = $post->findById($id);
+
         return $this->view('blog.show', compact('post'));
     }
 }
