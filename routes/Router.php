@@ -2,6 +2,8 @@
 
 namespace Router;
 
+use App\Exceptions\NotFoundException;
+
 class Router
 {
 
@@ -32,6 +34,7 @@ class Router
             }
         }
 
-        return header('HTTP/1.0 404 Not Found');
+        throw new NotFoundException("La page demandée est introuvable");
+
     }
 }
