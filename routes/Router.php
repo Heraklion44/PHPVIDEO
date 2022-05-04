@@ -30,11 +30,10 @@ class Router
     {
         foreach ($this->routes[$_SERVER['REQUEST_METHOD']] as $route) {
             if ($route->matches($this->url)) {
-                $route->execute();
+                return $route->execute();
             }
         }
 
         throw new NotFoundException("La page demandée est introuvable");
-
     }
 }

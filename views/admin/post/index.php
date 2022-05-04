@@ -17,7 +17,7 @@
                 <td><?= $post->getCreatedAt() ?></td>
                 <td>
                     <a href="#" class="btn btn-warning">Modifier</a>
-                    <a href="#" class="btn btn-danger">Supprimer</a>
+                    <a href="/admin/posts/delete/<?= $post->id ?>" class="btn btn-danger">Supprimer</a>
                 </td>
             </tr>
         <?php endforeach ?>
