@@ -17,7 +17,7 @@ class Route{
     }
 
     /**
-     * Verifie si le chemin passe existe
+     * Verifie si le chemin path existe
      */
     public function matches(string $url)
     {
