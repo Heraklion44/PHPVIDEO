@@ -26,7 +26,24 @@ abstract class Model
         return $this->query("SELECT * FROM {$this->table} WHERE id = ?", [$id], true);
     }
 
-    public function update(int $id, array $data)
+    public function create(array $data, ?array $relations = null)
+    {
+        $firstParenthesis = "";
+        $secondParenthesis = "";
+        $i = 1;
+
+
+        foreach($data as $key => $value) {
+            $comma = $i == count($data) ? "" : ", ";
+            $firstParenthesis .= "{$key}{$comma}";
+            $secondParenthesis .= ":{$key}{$comma}";
+            $i++;
+        }
+
+        return $this->query("INSERT INTO {$this->table} ($firstParenthesis) VALUES ($secondParenthesis)", $data);
+    }
+
+    public function  update(int $id, array $data)
     {
         $sqlRequestPart = "";
         $i = 1;
@@ -46,6 +63,11 @@ abstract class Model
     public function destroy(int $id): bool
     {
         return $this->query("DELETE FROM {$this->table} WHERE id = ?", [$id]);
+    }
+
+    public function report(int $id): bool
+    {
+        return $this->query("UPDATE FROM {$this->table} WHERE id = ?", [$id]);
     }
 
     public function query(string $sql, array $param = null, bool $single = null)

@@ -1,4 +1,7 @@
-<h1>Administration des articles</h1>
+<h1 style="text-align: -webkit-center;margin-top: 1em;margin-bottom: 1em;">Administration des articles</h1>
+
+<a href="/admin/posts/create" class="btn btn-success my-3">Créer un nouvel article</a>
+<a href="/admin/comments" class="btn btn-dark">Administration des commentaires</a>
 
 <table class="table">
     <thead>

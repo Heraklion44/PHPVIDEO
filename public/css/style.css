@@ -1,0 +1,19 @@
+.reportButton {
+    background-color: transparent;
+    color: none;
+    border: none;
+}
+
+.connexion {
+    height: 95vh;
+    background-image: url("../img/fond.png");
+    background-size: cover;
+    background-position: center;
+    width: 100vw;
+    position: absolute;
+    left: 0;
+}
+
+.d-flex {
+    flex-direction: column;
+}

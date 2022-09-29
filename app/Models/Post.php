@@ -4,6 +4,7 @@ namespace App\Models;
 
 use DateTime;
 
+
 class Post extends Model {
     protected $table = 'posts'; 
 
@@ -20,7 +21,13 @@ class Post extends Model {
     public function getButton(): string
     {
         return <<<HTML
-        <a href="/posts/$this->id" class="btn btn-primary">Lire l'article</a>
+        <a href="/posts/$this->id" class="btn btn-primary">LIRE</a>
 HTML;        
+    }
+
+    public function getLastPost()
+    {
+        $post = $this->query("SELECT * FROM `posts` ORDER BY `posts`.`created_at` DESC LIMIT 1");
+        return $post[0];
     }
 }

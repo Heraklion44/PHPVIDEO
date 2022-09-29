@@ -3,12 +3,15 @@
 namespace App\Controllers;
 
 use App\Models\Post;
+use App\Models\Comment;
 
 class BlogController extends Controller
 {
     public function welcome()
     {
-        return $this->view('blog.welcome');
+        $post = new Post($this->getDB());
+        $post = $post->getLastPost();
+        return $this->view('blog.welcome', compact('post'));
     }
 
     public function index()
@@ -24,7 +27,10 @@ class BlogController extends Controller
     {
         $post = new Post($this->getDB());
         $post = $post->findById($id);
+        //recuperer les commentaires dans une variable
+        $comments = new Comment($this->getDB());
+        $comments = $comments->getCommentsById($id);
 
-        return $this->view('blog.show', compact('post'));
+        return $this->view('blog.show', compact('post','comments')); //envoyer les commentaire dans compact  cf tag dans la video
     }
 }

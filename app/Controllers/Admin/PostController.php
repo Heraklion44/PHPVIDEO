@@ -3,6 +3,7 @@
 namespace App\Controllers\Admin;
 
 use App\Models\Post;
+use App\Models\Comment;
 use App\Controllers\Controller;
 
 class PostController extends Controller
@@ -12,14 +13,33 @@ class PostController extends Controller
     {
         $posts = (new Post($this->getDB()))->all();
 
-        return $this->view('admin.post.index', compact('posts'));
+        if (isset($_SESSION['user'])) {
+            return $this->view('admin.post.index', compact('posts'));
+        } else {
+            $error = "Veuillez vous connecter";
+            return $this->view('connexion',compact('error'));
+        }
+    }
+
+    public function create()
+    {
+        return $this->view('admin.post.form');
+    }
+
+    public function createPost()
+    {
+        $post = new Post($this->getDB());
+
+        $result = $post->create($_POST);
+
+        return header('Location: /admin/posts');
     }
 
     public function edit(int $id)
     {
         $post = (new Post($this->getDB()))->findById($id);
 
-        return $this->view('admin.post.edit', compact('post'));
+        return $this->view('admin.post.form', compact('post'));
     }
 
     public function update(int $id)
@@ -36,6 +56,13 @@ class PostController extends Controller
     {
         $post = new Post($this->getDB());
         $result = $post->destroy($id);
+        // recuperation des commentaires du post
+        $comments = new Comment($this->getDB());
+        $comments = $comments->getCommentsById($id);
+        //on supprime chaque commentaire
+        foreach ($comments as $comment) {
+            $comment->destroy($comment->id);
+        }
 
         if ($result) {
             return header('Location: /admin/posts');

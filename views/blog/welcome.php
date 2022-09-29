@@ -1,40 +1,44 @@
-<h1>Homepage</h1>
+<div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="false">
+  <div class="carousel-indicators">
+    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+  </div>
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="public/img/alaska1.jpg" class="d-block w-100" alt="...">
+      <div class="carousel-caption d-none d-md-block">
+        <h1>Jean Forteroche</h1>
+        <p>Présente</p>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <img src="public/img/alaska2.png" class="d-block w-100" alt="...">
+      <div class="carousel-caption d-none d-md-block">
+        <h1>Billet simple pour l'Alaska</h1>
+        <p>Un roman publié en ligne </p>
+      </div>
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
 
-<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit, quidem aspernatur? Vero in odit blanditiis. Id harum, nemo magni repellendus aliquid voluptate necessitatibus
-    veritatis ipsum voluptas illum veniam tenetur architecto aliquam optio nostrum ullam blanditiis nobis facilis? Itaque ducimus sunt nemo aperiam cum dolorum atque illo ea
-    fugit saepe nesciunt optio sapiente fuga rerum aut eligendi totam minima, error quam ad iusto! Omnis temporibus soluta laboriosam deserunt corporis, vitae earum, praesen
-    tium ducimus libero reiciendis quibusdam consequuntur similique ipsum neque voluptatum eum harum molestiae minima, fuga eveniet natus doloribus molestias quidem a. Fugit
-    officiis facere vel accusantium quos excepturi quaerat vero tenetur corporis voluptatibus, eius, blanditiis a consequuntur amet maxime placeat tempora magnam facilis
-    adipisci deleniti beatae debitis consequatur! Blanditiis iusto quisquam assumenda officia, impedit dolorem facere placeat nemo rerum natus, ipsum soluta quam magni,
-    odio fugiat alias sunt vitae tenetur voluptas expedita omnis repudiandae perspiciatis nesciunt. Delectus inventore officia architecto labore placeat culpa
-    exercitationem quo ad! Alias, impedit libero. Omnis totam ad at ipsa ipsam? Iusto vitae voluptas recusandae quaerat cum velit dolores eligendi neque pariatur ipsa et
-    ratione excepturi error saepe libero architecto sit adipisci cumque impedit similique, sapiente quos iste a quae. Officia odit mollitia molestias recusandae repellat
-    nisi non consequatur esse, fugiat natus rem saepe sit, vero quaerat laboriosam vitae accusamus dicta commodi distinctio eos pariatur et nihil placeat sequi. Itaque
-    sapiente deleniti veniam dolor maiores ipsum! Voluptas, nesciunt animi nostrum eligendi voluptate cum sint id. Magni doloremque unde asperiores alias maxime! Tenetur
-    ratione aspernatur tempore veniam.</p>
-
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit, quidem aspernatur? Vero in odit blanditiis. Id harum, nemo magni repellendus aliquid voluptate necessitatibus
-    veritatis ipsum voluptas illum veniam tenetur architecto aliquam optio nostrum ullam blanditiis nobis facilis? Itaque ducimus sunt nemo aperiam cum dolorum atque illo ea
-    fugit saepe nesciunt optio sapiente fuga rerum aut eligendi totam minima, error quam ad iusto! Omnis temporibus soluta laboriosam deserunt corporis, vitae earum, praesen
-    tium ducimus libero reiciendis quibusdam consequuntur similique ipsum neque voluptatum eum harum molestiae minima, fuga eveniet natus doloribus molestias quidem a. Fugit
-    officiis facere vel accusantium quos excepturi quaerat vero tenetur corporis voluptatibus, eius, blanditiis a consequuntur amet maxime placeat tempora magnam facilis
-    adipisci deleniti beatae debitis consequatur! Blanditiis iusto quisquam assumenda officia, impedit dolorem facere placeat nemo rerum natus, ipsum soluta quam magni,
-    odio fugiat alias sunt vitae tenetur voluptas expedita omnis repudiandae perspiciatis nesciunt. Delectus inventore officia architecto labore placeat culpa
-    exercitationem quo ad! Alias, impedit libero. Omnis totam ad at ipsa ipsam? Iusto vitae voluptas recusandae quaerat cum velit dolores eligendi neque pariatur ipsa et
-    ratione excepturi error saepe libero architecto sit adipisci cumque impedit similique, sapiente quos iste a quae. Officia odit mollitia molestias recusandae repellat
-    nisi non consequatur esse, fugiat natus rem saepe sit, vero quaerat laboriosam vitae accusamus dicta commodi distinctio eos pariatur et nihil placeat sequi. Itaque
-    sapiente deleniti veniam dolor maiores ipsum! Voluptas, nesciunt animi nostrum eligendi voluptate cum sint id. Magni doloremque unde asperiores alias maxime! Tenetur
-    ratione aspernatur tempore veniam.</p>
-
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit, quidem aspernatur? Vero in odit blanditiis. Id harum, nemo magni repellendus aliquid voluptate necessitatibus
-    veritatis ipsum voluptas illum veniam tenetur architecto aliquam optio nostrum ullam blanditiis nobis facilis? Itaque ducimus sunt nemo aperiam cum dolorum atque illo ea
-    fugit saepe nesciunt optio sapiente fuga rerum aut eligendi totam minima, error quam ad iusto! Omnis temporibus soluta laboriosam deserunt corporis, vitae earum, praesen
-    tium ducimus libero reiciendis quibusdam consequuntur similique ipsum neque voluptatum eum harum molestiae minima, fuga eveniet natus doloribus molestias quidem a. Fugit
-    officiis facere vel accusantium quos excepturi quaerat vero tenetur corporis voluptatibus, eius, blanditiis a consequuntur amet maxime placeat tempora magnam facilis
-    adipisci deleniti beatae debitis consequatur! Blanditiis iusto quisquam assumenda officia, impedit dolorem facere placeat nemo rerum natus, ipsum soluta quam magni,
-    odio fugiat alias sunt vitae tenetur voluptas expedita omnis repudiandae perspiciatis nesciunt. Delectus inventore officia architecto labore placeat culpa
-    exercitationem quo ad! Alias, impedit libero. Omnis totam ad at ipsa ipsam? Iusto vitae voluptas recusandae quaerat cum velit dolores eligendi neque pariatur ipsa et
-    ratione excepturi error saepe libero architecto sit adipisci cumque impedit similique, sapiente quos iste a quae. Officia odit mollitia molestias recusandae repellat
-    nisi non consequatur esse, fugiat natus rem saepe sit, vero quaerat laboriosam vitae accusamus dicta commodi distinctio eos pariatur et nihil placeat sequi. Itaque
-    sapiente deleniti veniam dolor maiores ipsum! Voluptas, nesciunt animi nostrum eligendi voluptate cum sint id. Magni doloremque unde asperiores alias maxime! Tenetur
-    ratione aspernatur tempore veniam.</p>
+  <div class="card text-center" style="margin-top: 3em;">
+    <div class="card-header">
+    </div>
+    <div class="card-body">
+      <h5 class="card-title"><?= $params['post']->title ?></h5>
+      <p class="card-text"><?= $params['post']->getExcerpt() ?></p>
+      <?= $params['post']->getButton() ?>
+    </div>
+    <div class="card-footer text-muted">
+      <?= $params['post']->getCreatedAt() ?>
+    </div>
+  </div>
+</div>
